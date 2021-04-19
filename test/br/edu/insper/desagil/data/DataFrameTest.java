@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 
 public class DataFrameTest {
 	private static double DELTA = 0.000001;
-	
+
 	private DataFrame d;
 
 	@BeforeEach
@@ -22,7 +22,7 @@ public class DataFrameTest {
 	@Test
 	public void invalidMin() {
 		DataFrameException e = assertThrows(DataFrameException.class, () -> {
-			d.contas("invalidMin");
+			d.min("invalidMin");
 		});
 		assertEquals("Column invalidMin is invalid!", e.getMessage());
 	}
@@ -30,7 +30,7 @@ public class DataFrameTest {
 	@Test
 	public void invalidMax() {
 		DataFrameException e = assertThrows(DataFrameException.class, () -> {
-			d.contas("invalidMax");
+			d.max("invalidMax");
 		});
 		assertEquals("Column invalidMax is invalid!", e.getMessage());
 	}
@@ -38,7 +38,7 @@ public class DataFrameTest {
 	@Test
 	public void invalidSum() {
 		DataFrameException e = assertThrows(DataFrameException.class, () -> {
-			d.contas("invalidSum");
+			d.sum("invalidSum");
 		});
 		assertEquals("Column invalidSum is invalid!", e.getMessage());
 	}
@@ -46,7 +46,7 @@ public class DataFrameTest {
 	@Test
 	public void invalidAvg() {
 		DataFrameException e = assertThrows(DataFrameException.class, () -> {
-			d.contas("invalidAvg");
+			d.avg("invalidAvg");
 		});
 		assertEquals("Column invalidAvg is invalid!", e.getMessage());
 	}
@@ -54,7 +54,7 @@ public class DataFrameTest {
 	@Test
 	public void invalidVar() {
 		DataFrameException e = assertThrows(DataFrameException.class, () -> {
-			d.contas("invalidVar");
+			d.var("invalidVar");
 		});
 		assertEquals("Column invalidVar is invalid!", e.getMessage());
 	}
@@ -62,7 +62,7 @@ public class DataFrameTest {
 	@Test
 	public void invalidStd() {
 		DataFrameException e = assertThrows(DataFrameException.class, () -> {
-			d.contas("invalidStd");
+			d.std("invalidStd");
 		});
 		assertEquals("Column invalidStd is invalid!", e.getMessage());
 	}
@@ -71,7 +71,7 @@ public class DataFrameTest {
 	public void emptyMin() {
 		d.addColumn("emptyMin", new ArrayList<>());
 		DataFrameException e = assertThrows(DataFrameException.class, () -> {
-			d.contas("emptyMin");
+			d.min("emptyMin");
 		});
 		assertEquals("Column emptyMin is empty!", e.getMessage());
 	}
@@ -80,7 +80,7 @@ public class DataFrameTest {
 	public void emptyMax() {
 		d.addColumn("emptyMax", new ArrayList<>());
 		DataFrameException e = assertThrows(DataFrameException.class, () -> {
-			d.contas("emptyMax");
+			d.max("emptyMax");
 		});
 		assertEquals("Column emptyMax is empty!", e.getMessage());
 	}
@@ -89,7 +89,7 @@ public class DataFrameTest {
 	public void emptySum() {
 		d.addColumn("emptySum", new ArrayList<>());
 		DataFrameException e = assertThrows(DataFrameException.class, () -> {
-			d.contas("emptySum");
+			d.sum("emptySum");
 		});
 		assertEquals("Column emptySum is empty!", e.getMessage());
 	}
@@ -98,7 +98,7 @@ public class DataFrameTest {
 	public void emptyAvg() {
 		d.addColumn("emptyAvg", new ArrayList<>());
 		DataFrameException e = assertThrows(DataFrameException.class, () -> {
-			d.contas("emptyAvg");
+			d.avg("emptyAvg");
 		});
 		assertEquals("Column emptyAvg is empty!", e.getMessage());
 	}
@@ -107,7 +107,7 @@ public class DataFrameTest {
 	public void emptyVar() {
 		d.addColumn("emptyVar", new ArrayList<>());
 		DataFrameException e = assertThrows(DataFrameException.class, () -> {
-			d.contas("emptyVar");
+			d.var("emptyVar");
 		});
 		assertEquals("Column emptyVar is empty!", e.getMessage());
 	}
@@ -116,7 +116,7 @@ public class DataFrameTest {
 	public void emptyStd() {
 		d.addColumn("emptyStd", new ArrayList<>());
 		DataFrameException e = assertThrows(DataFrameException.class, () -> {
-			d.contas("emptyStd");
+			d.std("emptyStd");
 		});
 		assertEquals("Column emptyStd is empty!", e.getMessage());
 	}

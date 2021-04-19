@@ -17,7 +17,7 @@ public class DataFrame {
 	}
 
 	public Map<String, List<Double>> getColumns() {
-		return columns;
+		return this.columns;
 	}
 	
 	public double contas(String label) {

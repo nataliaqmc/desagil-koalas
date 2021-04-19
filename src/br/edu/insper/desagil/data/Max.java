@@ -10,8 +10,8 @@ public class Max extends DataFrame{
 		super();
 		this.columns = columns;
 	}
-	@Override
-	public double contas (String label) {
+
+	public double max(String label) {
 		if (!this.columns.containsKey(label)) {
 			throw new DataFrameException("Column " + label + " is invalid!");
 		}
